@@ -37,7 +37,6 @@ class LinkPreviewCard extends HTMLElement {
   }
 
   renderCard(data) {
-      // Basic rendering for Check-in 1
       this.shadowRoot.querySelector('.loading').style.display = 'none';
       const card = this.shadowRoot.querySelector('.card');
       card.innerHTML = `
