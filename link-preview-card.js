@@ -24,7 +24,7 @@ class LinkPreviewCard extends HTMLElement {
       if (!this.href) return;
 
       try {
-          const response = await fetch(`https://open-apis.haxtheweb.org/api/website/metadata?url=${encodeURIComponent(this.href)}`);
+          const response = await fetch(`https://open-apis.hax.cloud/api/services/website/metadata?q=${this.href}`);
           if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -37,7 +37,6 @@ class LinkPreviewCard extends HTMLElement {
   }
 
   renderCard(data) {
-      // Basic rendering for Check-in 1
       this.shadowRoot.querySelector('.loading').style.display = 'none';
       const card = this.shadowRoot.querySelector('.card');
       card.innerHTML = `
