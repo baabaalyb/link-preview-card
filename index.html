@@ -1,15 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Preview Card Demo</title>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Demonstration for link-preview-card">
+
+  <style>
+    :root, html, body {
+      margin: 0;
+      padding: 0;
+    }
+    #demo {
+      margin: 16px;
+    }
+    link-preview-card {
+      margin: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: block;
+    }
+    link-preview-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <title>link-preview-card</title>
 </head>
+
 <body>
-    <link-preview-card href="https://psu.edu/"></link-preview-card>
+  <div id="demo">
+    <h1>link-preview-card</h1>
+
+    <p>Penn State University, located in State College, PA, is a public research university known for its strong academic programs and vibrant campus life.</p>
+    <link-preview-card href="https://www.psu.edu/"></link-preview-card>
+
+    <p>YouTube is a popular online video sharing platform where users can upload, view, and share videos on a wide range of topics.</p>
     <link-preview-card href="https://www.youtube.com/"></link-preview-card>
-    <link-preview-card href="https://developer.mozilla.org/"></link-preview-card>
-    <link-preview-card href="https://www.wikipedia.org/"></link-preview-card>
-    <script type="module" src="./link-preview-card.js"></script>
+
+    <p>Reddit is a social news aggregation, web content rating, and discussion website where registered users submit content in the form of links, text posts, images, and videos.</p>
+    <link-preview-card href="https://www.reddit.com/"></link-preview-card>
+
+    <p>Amazon is a multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.</p>
+    <link-preview-card href="https://www.amazon.com/"></link-preview-card>
+  </div>
+
+  <script type="module" src="./link-preview-card.js"></script>
 </body>
 </html>
